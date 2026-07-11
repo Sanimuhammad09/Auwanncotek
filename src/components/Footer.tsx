@@ -1,4 +1,5 @@
-import { Globe, MessageCircle, Video, Users, MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -13,10 +14,12 @@ export default function Footer() {
               Your Trusted One-Stop IT Hub. We specialize in Gadget Sales, PC Repairs, POS Systems, Web Design, and reliable IT Support.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" className="social-icon"><Globe size={20} /></a>
-              <a href="#" className="social-icon"><MessageCircle size={20} /></a>
-              <a href="#" className="social-icon"><Video size={20} /></a>
-              <a href="#" className="social-icon"><Users size={20} /></a>
+              <a href="#" className="social-icon"><FaFacebook size={20} /></a>
+              <a href="#" className="social-icon"><FaTwitter size={20} /></a>
+              <a href="#" className="social-icon"><FaInstagram size={20} /></a>
+              <a href="#" className="social-icon"><FaTiktok size={20} /></a>
+              <a href="#" className="social-icon"><FaLinkedin size={20} /></a>
+              <a href="#" className="social-icon"><FaYoutube size={20} /></a>
             </div>
           </div>
 
