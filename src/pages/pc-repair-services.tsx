@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
 import { Wrench, HardDrive, ShieldAlert, Zap, ArrowUpCircle, Database, Settings, CheckCircle } from 'lucide-react';
-import { Link } from '@tanstack/react-router';
 
 export default function PCRepairServicesPage() {
   const services = [

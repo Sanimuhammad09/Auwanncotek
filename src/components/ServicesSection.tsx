@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from '@tanstack/react-router';
-import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Database, Users, Laptop, Search, Server } from 'lucide-react';
+import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, Database, Users, Laptop, Search } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [

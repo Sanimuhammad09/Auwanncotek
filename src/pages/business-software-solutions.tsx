@@ -2,8 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
-import { Layout, CheckCircle, Database, Users, LineChart, Server, CreditCard, Stethoscope, Search, ShoppingCart } from 'lucide-react';
-import { Link } from '@tanstack/react-router';
+import { Layout, CheckCircle, Users, LineChart, Server, CreditCard, Stethoscope, ShoppingCart } from 'lucide-react';
 
 export default function BusinessSoftwareSolutionsPage() {
   const solutions = [
