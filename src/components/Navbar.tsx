@@ -53,12 +53,12 @@ export default function Navbar() {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.9)' }}>
           <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Mail size={14} color="var(--color-accent)" /> hello@vinfotech.ng
+            <Mail size={14} color="var(--color-accent)" /> info@auwancotek.com
           </span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Phone size={14} color="var(--color-accent)" /> +234 703 2888 915
+            <Phone size={14} color="var(--color-accent)" /> +234 901 500 1001
           </span>
           <span style={{ display: 'none', alignItems: 'center', gap: '0.5rem' }} className="desktop-nav">
             <Clock size={14} color="var(--color-accent)" /> Mon - Sat 8:00 - 18:00, Sunday - CLOSED

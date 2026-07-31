@@ -75,15 +75,15 @@ export default function HeroSection() {
               border: '1px solid rgba(255,255,255,0.2)',
               backdropFilter: 'blur(10px)'
             }}>
-              Your Trusted One-Stop IT Hub
+              Your Trusted Partner for IT Solutions & Consultancy
             </span>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', marginBottom: '1.5rem', color: 'white' }}>
-              Empowering Your Digital <br/>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', marginBottom: '1.5rem', color: 'white', lineHeight: 1.1 }}>
+              Technology That Drives Your <br/>
               <span className="text-gradient" style={{ 
                 background: 'linear-gradient(135deg, #fff, var(--color-accent))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>Experience</span>
+              }}>Business Forward</span>
             </h1>
           </motion.div>
 
@@ -91,10 +91,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ fontSize: '1.2rem', color: 'rgba(255, 255, 255, 0.8)', marginBottom: '2.5rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}
+            style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '2.5rem', maxWidth: '800px', margin: '0 auto 2.5rem', lineHeight: 1.6 }}
           >
-            AUWANCOTEK is specialized in Gadget Sales, PC Repairs, POS System, Web Design, 
-            Digital Passport Photos, Business Centre Services, Virtual Assistance, and reliable IT Support.
+            Whether you're a startup, established business, educational institution, government agency, or non-profit organisation, Auwancotek Limited provides innovative technology solutions and professional support services that improve productivity, streamline operations, and accelerate growth.
           </motion.p>
 
           <motion.div
@@ -104,7 +103,7 @@ export default function HeroSection() {
             style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}
           >
             <a href="#contacts" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-              GET IN TOUCH <ArrowRight size={20} />
+              Request a Free Consultation <ArrowRight size={20} />
             </a>
             <a href="#services" className="btn" style={{ 
               padding: '1rem 2rem', 
@@ -114,7 +113,7 @@ export default function HeroSection() {
               border: '1px solid rgba(255,255,255,0.2)',
               backdropFilter: 'blur(5px)'
             }}>
-              Explore Services
+              Explore Our Services
             </a>
           </motion.div>
         </div>

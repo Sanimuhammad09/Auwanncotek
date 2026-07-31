@@ -67,31 +67,36 @@ export default function ContactsPage() {
               {/* Contact Info */}
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Visit Us!</h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginBottom: '3rem' }}>
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', padding: '0.75rem', borderRadius: '0.75rem', flexShrink: 0 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
+                  {/* Phone */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'var(--color-bg)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--color-border)' }}>
+                    <div style={{ background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', padding: '1rem', borderRadius: '50%' }}>
                       <Phone size={24} />
                     </div>
                     <div>
-                      <h4 style={{ marginBottom: '0.25rem' }}>Phone</h4>
-                      <p style={{ color: 'var(--color-text-muted)' }}>+234 703 2888 915</p>
+                      <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Phone</h4>
+                      <p style={{ color: 'var(--color-text-muted)' }}>+234 901 500 1001</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', padding: '0.75rem', borderRadius: '0.75rem', flexShrink: 0 }}>
+
+                  {/* Email */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'var(--color-bg)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--color-border)' }}>
+                    <div style={{ background: 'rgba(4,107,210,0.1)', color: 'var(--color-primary)', padding: '1rem', borderRadius: '50%' }}>
                       <Mail size={24} />
                     </div>
                     <div>
-                      <h4 style={{ marginBottom: '0.25rem' }}>Email</h4>
-                      <p style={{ color: 'var(--color-text-muted)' }}>hello@auwancotek.ng</p>
+                      <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Email</h4>
+                      <p style={{ color: 'var(--color-text-muted)' }}>info@auwancotek.com</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', padding: '0.75rem', borderRadius: '0.75rem', flexShrink: 0 }}>
+
+                  {/* Visit Us */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'var(--color-bg)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--color-border)' }}>
+                    <div style={{ background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', padding: '1rem', borderRadius: '50%' }}>
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <h4 style={{ marginBottom: '0.25rem' }}>Visit Us</h4>
+                      <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Visit Us</h4>
                       <p style={{ color: 'var(--color-text-muted)' }}>762 Emmanuel Adiele Street, Jabi, Abuja, Nigeria</p>
                     </div>
                   </div>

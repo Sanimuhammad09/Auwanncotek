@@ -55,13 +55,13 @@ export default function Footer() {
                 <MapPin size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '3px' }} />
                 <span style={{ color: 'rgba(255,255,255,0.7)' }}>762 Emmanuel Adiele, Jabi, Abuja</span>
               </li>
-              <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Phone size={20} color="var(--color-accent)" style={{ flexShrink: 0 }} />
-                <span style={{ color: 'rgba(255,255,255,0.7)' }}>+234 703 2888 915</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <Phone size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <span style={{ color: 'rgba(255,255,255,0.7)' }}>+234 901 500 1001</span>
               </li>
-              <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Mail size={20} color="var(--color-accent)" style={{ flexShrink: 0 }} />
-                <span style={{ color: 'rgba(255,255,255,0.7)' }}>hello@auwancotek.ng</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <Mail size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <span style={{ color: 'rgba(255,255,255,0.7)' }}>info@auwancotek.com</span>
               </li>
             </ul>
           </div>

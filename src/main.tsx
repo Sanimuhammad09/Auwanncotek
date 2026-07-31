@@ -26,6 +26,7 @@ import GraphicDesignPage from './pages/graphic-design';
 import LaptopSalesPage from './pages/laptop-sales';
 import PhoneAccessoriesPage from './pages/phone-accessories';
 import PCAccessoriesPage from './pages/pc-accessories';
+import BusinessSoftwareSolutionsPage from './pages/business-software-solutions';
 
 const rootRoute = createRootRoute({
   component: () => <Outlet />,
@@ -44,6 +45,7 @@ const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: '/contacts', component: ContactsPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/it-technical-support', component: ITTechnicalSupportPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/pc-repair-services', component: PCRepairServicesPage }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/business-software-solutions', component: BusinessSoftwareSolutionsPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/business-centre', component: BusinessCentrePage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/cac-registrations', component: CACRegistrationsPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/point-of-sale-system', component: PointOfSaleSystemPage }),

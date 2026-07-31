@@ -1,17 +1,21 @@
 import { motion } from 'framer-motion';
-import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool } from 'lucide-react';
+import { Link } from '@tanstack/react-router';
+import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Database, Users, Laptop, Search, Server } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
-    { title: 'IT Technical Support', icon: <Wrench size={32} />, desc: 'Fast and effective solutions from troubleshooting, maintenance, to system upgrade, available 24/7.' },
-    { title: 'PC Repairs & Services', icon: <MonitorDot size={32} />, desc: 'We fix cracked screens, slow PCs, or startup issues with expert repairs and upgrades.' },
-    { title: 'Business Centre', icon: <Briefcase size={32} />, desc: 'Professional business services from printing and typing to internet access.' },
-    { title: 'CAC Registrations', icon: <FileText size={32} />, desc: 'Register your business, company or Trustee with ease. We help startups get legally recognized.' },
-    { title: 'Point of Sale System', icon: <ShoppingCart size={32} />, desc: 'Simplify sales and track inventory. Our POS with ERP systems grow with you.' },
-    { title: 'Virtual Assistance', icon: <UserCheck size={32} />, desc: 'Delegate your tasks to our expert virtual assistants and focus on growing your business.' },
-    { title: 'Computer Training', icon: <GraduationCap size={32} />, desc: 'Practical skills you need for today’s tech-driven jobs and everyday life.' },
-    { title: 'Website Design', icon: <Layout size={32} />, desc: 'Stunning, user-friendly websites that attract customers and build trust.' },
-    { title: 'Graphic Design', icon: <PenTool size={32} />, desc: 'Eye-catching visuals that tell your story and leave a lasting impression.' },
+    { title: 'IT Technical Support', icon: <Wrench size={32} />, desc: 'Keep your systems running efficiently with proactive IT support, troubleshooting, maintenance, cybersecurity, and network management.', link: '/it-technical-support' },
+    { title: 'PC Repairs & Maintenance', icon: <MonitorDot size={32} />, desc: 'Fast and reliable repair services for desktops and laptops, including hardware upgrades, virus removal, diagnostics, and data recovery.', link: '/pc-repair-services' },
+    { title: 'Business Software Solutions', icon: <Layout size={32} />, desc: 'Powerful software systems designed to automate operations, improve productivity, and simplify business management.', link: '/business-software-solutions' },
+    { title: 'HRMS, POS & ERP Solutions', icon: <Database size={32} />, desc: 'Smart Point of Sale and Enterprise Resource Planning systems that help businesses manage inventory, sales, finances, and reporting.', link: '/point-of-sale-system' },
+    { title: 'Procurement Support', icon: <ShoppingCart size={32} />, desc: 'Professional procurement planning, supplier sourcing, contract management, compliance support, and strategic purchasing solutions.', link: '/business-centre' },
+    { title: 'CAC Registration Services', icon: <FileText size={32} />, desc: 'Business name registration, company incorporation, NGO registration, TIN processing, and post-incorporation services handled professionally.', link: '/cac-registrations' },
+    { title: 'Virtual Assistance', icon: <UserCheck size={32} />, desc: 'Dedicated virtual professionals who help manage administrative tasks, customer support, scheduling, email management, and business operations.', link: '/virtual-assistance' },
+    { title: 'Computer Training', icon: <GraduationCap size={32} />, desc: 'Practical ICT training programs designed to equip individuals and organizations with essential digital skills.', link: '/computer-training' },
+    { title: 'NERD Onboarding & Project Support', icon: <Users size={32} />, desc: 'Helping students complete NERD registration, project uploads, document preparation, and submission without stress.', link: '/business-centre' },
+    { title: 'Research & Project Support', icon: <Search size={32} />, desc: 'Professional assistance with academic research, project documentation, feasibility studies, technical reports, and consultancy.', link: '/business-centre' },
+    { title: 'Office Equipment & Workplace Solutions', icon: <Laptop size={32} />, desc: 'Supply, installation, and maintenance of computers, networking equipment, printers, office furniture, communication systems, and workplace technology.', link: '/laptop-sales' },
+    { title: 'General Consultancy', icon: <Briefcase size={32} />, desc: 'Strategic business advice, operational improvement, organizational development, compliance support, and capacity building.', link: '/contacts' },
   ];
 
   const containerVariants = {
@@ -31,10 +35,10 @@ export default function ServicesSection() {
     <section id="services" className="section">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>EXPERTISE</span>
-          <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Our Services</h2>
-          <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '1rem auto 0' }}>
-            Whether you're a growing business, remote worker, or tech enthusiast, our expert IT services deliver tailored solutions to fit your goals and budget.
+          <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>OUR SERVICES</span>
+          <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Comprehensive Solutions for Modern Organizations</h2>
+          <p style={{ color: 'var(--color-text-muted)', maxWidth: '700px', margin: '1rem auto 0', fontSize: '1.1rem' }}>
+            We provide comprehensive IT services, business solutions, consultancy, procurement support, and digital transformation services that enable organizations to operate more efficiently and compete with confidence.
           </p>
         </div>
 
@@ -79,9 +83,9 @@ export default function ServicesSection() {
               <p style={{ color: 'var(--color-text-muted)', marginBottom: '1.5rem', flexGrow: 1 }}>
                 {service.desc}
               </p>
-              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, marginTop: 'auto' }}>
+              <Link to={service.link} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, marginTop: 'auto', textDecoration: 'none' }}>
                 Find Out More <span style={{ transition: 'transform 0.2s' }} className="arrow">⟶</span>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
