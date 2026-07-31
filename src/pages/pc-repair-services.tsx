@@ -23,8 +23,8 @@ export default function PCRepairServicesPage() {
       <main style={{ flexGrow: 1 }}>
         <PageHeader
           title="PC Repairs & Maintenance"
-          subtitle="Fast, Reliable Computer Repair Services You Can Trust"
-          backgroundImage="/slide-2.png"
+          subtitle="Expert Diagnostic and Repair Services for Your Hardware"
+          backgroundImage="/pc_repairs_ng_1785470447305.png"
         />
 
         {/* Overview */}

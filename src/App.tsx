@@ -6,11 +6,12 @@ import ProductCarousel from './components/ProductCarousel';
 import ServicesSection from './components/ServicesSection';
 import Process from './components/Process';
 import Industries from './components/Industries';
-import VinfostockPricing from './components/VinfostockPricing';
+import WhyTrustUs from './components/WhyTrustUs';
 import MeetCEO from './components/MeetCEO';
 import Commitment from './components/Commitment';
 import AboutUs from './components/AboutUs';
 import Testimonials from './components/Testimonials';
+import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 
 function App() {
@@ -24,11 +25,12 @@ function App() {
         <ServicesSection />
         <Process />
         <Industries />
-        <VinfostockPricing />
+        <WhyTrustUs />
         <MeetCEO />
         <Commitment />
         <AboutUs />
         <Testimonials />
+        <CallToAction />
       </main>
       <Footer />
     </div>

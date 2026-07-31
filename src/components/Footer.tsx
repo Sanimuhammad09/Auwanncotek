@@ -9,9 +9,9 @@ export default function Footer() {
           
           {/* Brand & About */}
           <div>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'white' }}>Auwancotek</h3>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'white' }}>Auwancotek Limited</h3>
             <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-              Your Trusted One-Stop IT Hub. We specialize in Gadget Sales, PC Repairs, POS Systems, Web Design, and reliable IT Support.
+              Delivering innovative technology solutions, professional consultancy, procurement support, software systems, workplace technology, and business services that empower organizations to thrive in today's digital world.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="#" className="social-icon"><FaFacebook size={20} /></a>

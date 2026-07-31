@@ -32,7 +32,7 @@ export default function ITTechnicalSupportPage() {
         <PageHeader
           title="IT Technical Support"
           subtitle="Reliable IT Support That Keeps Your Business Running"
-          backgroundImage="/slide-1.png"
+          backgroundImage="/it_support_ng_1785470435949.png"
         />
 
         {/* Overview */}

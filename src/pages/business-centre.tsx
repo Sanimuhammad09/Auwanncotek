@@ -10,7 +10,7 @@ export default function BusinessCentrePage() {
         <ServicePageLayout
           title="Business Centre"
           subtitle="We provide fast, affordable, and professional business services — from printing and typing to internet access, lamination, and more."
-          heroImage="/slide-4.png"
+          heroImage="/business_centre_ng_1785470456375.png"
           introText="AUWANCOTEK Business Centre is your go-to destination for a wide range of professional office and business support services. Whether you need to print documents, access the internet, get passport-size photographs, or handle bulk photocopying — we deliver quality results at competitive prices, every single time."
           servicesTitle="Our Business Centre Services Include"
           services={[

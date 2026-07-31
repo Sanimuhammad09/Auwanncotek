@@ -10,7 +10,7 @@ export default function CACRegistrationsPage() {
         <ServicePageLayout
           title="CAC Registrations"
           subtitle="Fast & Hassle-Free CAC Business Registrations. We handle the process so you can focus on growing your business."
-          heroImage="/slide-4.png"
+          heroImage="/cac_registration_ng_1785470496606.png"
           introText="At AUWANCOTEK, we specialize in seamless CAC registration services for individuals, startups, and existing businesses. Whether you're starting as a sole proprietor, registering a full company or incorporated trustee, we handle the process so you can focus on growing your business."
           servicesTitle="Our CAC Services Include"
           services={[
