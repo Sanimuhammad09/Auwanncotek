@@ -29,7 +29,7 @@ export default function PCRepairServicesPage() {
         {/* Overview */}
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'center' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>OVERVIEW</span>
                 <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem', marginBottom: '1.5rem', lineHeight: 1.2 }}>
@@ -56,7 +56,7 @@ export default function PCRepairServicesPage() {
               <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>WHAT WE OFFER</span>
               <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Comprehensive PC Repair & Maintenance</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
               {services.map((svc, idx) => (
                 <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}
                   whileHover={{ y: -5, boxShadow: 'var(--shadow-lg)' }}
@@ -75,13 +75,13 @@ export default function PCRepairServicesPage() {
         {/* Devices We Service */}
         <section className="section" style={{ background: 'linear-gradient(135deg, var(--color-primary), #0a192f)', color: 'white' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'center' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Devices We Service</h2>
                 <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
                   Our technicians repair and maintain a wide range of computer systems. We support most leading brands, including Dell, HP, Lenovo, Acer, ASUS, Apple, MSI, Toshiba, Samsung, and many others.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="grid-responsive">
                   {devices.map((device, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <CheckCircle size={20} color="var(--color-accent)" />

@@ -4,7 +4,7 @@ export default function MeetCEO() {
   return (
     <section className="section" style={{ background: 'var(--color-primary)', color: 'white' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center' }}>
           
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -18,7 +18,7 @@ export default function MeetCEO() {
               overflow: 'hidden',
               boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)'
             }}>
-              <img src="/ceo.png" alt="Vincent Okoye - CEO" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/ceo.png" alt="Muhammad Awal Usman - CEO" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
           </motion.div>
 
@@ -38,7 +38,7 @@ export default function MeetCEO() {
               At the heart of Auwancotek is a visionary leader whose passion for technology and service excellence has shaped the Enterprise into a trusted name in IT and digital solutions.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '2rem', fontSize: '1.05rem' }}>
-              <strong>Vincent Okoye</strong>, the Founder and CEO, is a dynamic entrepreneur and seasoned IT professional with a deep-rooted belief in the power of technology to transform lives and businesses. With a background in Humanity, IT, Business, and over 15 years of hands-on experience, Vincent founded the enterprise to bridge the digital gap in communities.
+              <strong>Muhammad Awal Usman</strong>, the Founder and CEO, is a dynamic entrepreneur and seasoned IT professional with a deep-rooted belief in the power of technology to transform lives and businesses. With a background in Humanity, IT, Business, and over 15 years of hands-on experience, Muhammad Awal founded the enterprise to bridge the digital gap in communities.
             </p>
 
             <blockquote style={{ 
@@ -53,7 +53,7 @@ export default function MeetCEO() {
             </blockquote>
             
             <div style={{ marginTop: '2rem', fontWeight: 600 }}>
-              — Vincent Okoye
+              — Muhammad Awal Usman
             </div>
           </motion.div>
 

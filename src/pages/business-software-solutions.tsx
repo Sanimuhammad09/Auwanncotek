@@ -42,7 +42,7 @@ export default function BusinessSoftwareSolutionsPage() {
         {/* Overview */}
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'center' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>OVERVIEW</span>
                 <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem', marginBottom: '1.5rem', lineHeight: 1.2 }}>
@@ -64,7 +64,7 @@ export default function BusinessSoftwareSolutionsPage() {
                   boxShadow: 'var(--shadow-md)'
                 }}>
                   <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Benefits of Our Software</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="grid-responsive">
                     {benefits.map((benefit, i) => (
                       <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                         <CheckCircle size={18} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />
@@ -85,7 +85,7 @@ export default function BusinessSoftwareSolutionsPage() {
               <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>OUR SOFTWARE SOLUTIONS</span>
               <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Comprehensive Software for Every Organisation</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
               {solutions.map((svc, idx) => (
                 <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.05 }}
                   whileHover={{ y: -5, boxShadow: 'var(--shadow-lg)' }}

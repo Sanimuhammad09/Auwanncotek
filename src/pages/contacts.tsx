@@ -26,12 +26,12 @@ export default function ContactsPage() {
 
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem' }}>
               {/* Contact Form */}
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Send Us a Message</h2>
                 <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={e => e.preventDefault()}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="grid-responsive">
                     <div>
                       <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>First Name</label>
                       <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
@@ -97,7 +97,7 @@ export default function ContactsPage() {
                     </div>
                     <div>
                       <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Visit Us</h4>
-                      <p style={{ color: 'var(--color-text-muted)' }}>762 Emmanuel Adiele Street, Jabi, Abuja, Nigeria</p>
+                      <p style={{ color: 'var(--color-text-muted)' }}>No 1 Kudang Street, Off Monrovia Street, Wuse 2, Abuja FCT Nigeria</p>
                     </div>
                   </div>
                 </div>

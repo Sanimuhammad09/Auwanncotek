@@ -53,7 +53,7 @@ export default function ServicePageLayout({
       {/* Content Section */}
       <section className="section" style={{ background: 'var(--color-surface)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'start' }}>
             {/* Text Content */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text)', lineHeight: 1.8, marginBottom: '2.5rem' }}>

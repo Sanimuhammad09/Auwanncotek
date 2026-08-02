@@ -44,7 +44,7 @@ export default function Navbar() {
       style={{ zIndex: 99999, display: 'flex', flexDirection: 'column' }}
     >
       {/* Top Bar (like original website) */}
-      <div style={{ 
+      <div className="topbar-wrapper" style={{ 
         background: 'var(--color-primary)', 
         color: 'white', 
         padding: '0.5rem 2rem', 
@@ -53,11 +53,11 @@ export default function Navbar() {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.9)' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div className="topbar-info" style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.9)' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
             <Mail size={14} color="var(--color-accent)" /> info@auwancotek.com
           </span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
             <Phone size={14} color="var(--color-accent)" /> +234 901 500 1001
           </span>
           <span style={{ display: 'none', alignItems: 'center', gap: '0.5rem' }} className="desktop-nav">
@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="glass" style={{ padding: '0.5rem 2rem' }}>
+      <div className="glass main-nav-wrapper" style={{ padding: '0.5rem 2rem' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: 0 }}>
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
@@ -255,6 +255,11 @@ export default function Navbar() {
         @media (min-width: 992px) {
           .desktop-nav { display: flex !important; }
           .mobile-menu-btn { display: none !important; }
+        }
+        @media (max-width: 768px) {
+          .topbar-wrapper { padding: 0.5rem 1rem !important; flex-direction: column; gap: 0.5rem; justify-content: center; }
+          .topbar-info { flex-direction: column; gap: 0.5rem !important; align-items: center; }
+          .main-nav-wrapper { padding: 0.5rem 1rem !important; }
         }
         .dropdown-item:hover {
           background: var(--color-bg) !important;

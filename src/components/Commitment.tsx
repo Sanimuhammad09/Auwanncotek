@@ -16,7 +16,7 @@ export default function Commitment() {
         zIndex: -1
       }} />
       <div className="container" style={{ color: 'white' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '4rem', alignItems: 'center' }}>
           
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <span style={{ display: 'inline-block', padding: '0.4rem 1rem', background: 'rgba(255,255,255,0.1)', borderRadius: '2rem', marginBottom: '1rem', fontSize: '0.9rem', fontWeight: 600 }}>
@@ -44,7 +44,7 @@ export default function Commitment() {
             borderRadius: '1rem'
           }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'white' }}>Why Our Clients Trust Us</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div className="grid-responsive">
               {reasons.map((reason, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                   <CheckCircle size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />

@@ -1,11 +1,11 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer id="contacts" style={{ background: 'var(--color-primary)', color: 'white', paddingTop: '5rem', paddingBottom: '2rem' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '3rem', marginBottom: '4rem' }}>
           
           {/* Brand & About */}
           <div>
@@ -53,7 +53,7 @@ export default function Footer() {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <MapPin size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ color: 'rgba(255,255,255,0.7)' }}>762 Emmanuel Adiele, Jabi, Abuja</span>
+                <span style={{ color: 'rgba(255,255,255,0.7)' }}>No 1 Kudang Street, Off Monrovia Street, Wuse 2, Abuja FCT Nigeria</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <Phone size={20} color="var(--color-accent)" style={{ flexShrink: 0, marginTop: '2px' }} />
@@ -103,6 +103,33 @@ export default function Footer() {
           color: var(--color-accent) !important;
         }
       `}</style>
+
+      {/* WhatsApp Floating Icon */}
+      <a
+        href="https://wa.me/2349015001001"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          backgroundColor: '#25D366',
+          color: 'white',
+          borderRadius: '50%',
+          width: '60px',
+          height: '60px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+          zIndex: 1000,
+          transition: 'transform 0.3s ease',
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      >
+        <FaWhatsapp size={35} />
+      </a>
     </footer>
   );
 }

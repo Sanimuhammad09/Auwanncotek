@@ -21,7 +21,7 @@ export default function WhyTrustUs() {
           <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Why Our Clients Trust Us</h2>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '2rem' }}>
           {points.map((point, index) => (
             <motion.div 
               key={index}

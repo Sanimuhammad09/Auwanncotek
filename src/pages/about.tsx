@@ -38,7 +38,7 @@ export default function AboutPage() {
         {/* Hero / Intro */}
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'center' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>WHO WE ARE</span>
                 <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem', marginBottom: '1.5rem', lineHeight: 1.2 }}>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         {/* Vision & Mission */}
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2.5rem' }}>
               <motion.div whileHover={{ y: -5 }} style={{ padding: '2.5rem', background: 'var(--color-bg)', borderRadius: '1rem', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-sm)' }}>
                 <div style={{ display: 'inline-flex', padding: '1rem', background: 'rgba(246,74,0,0.1)', color: 'var(--color-accent)', borderRadius: '1rem', marginBottom: '1.5rem' }}>
                   <Target size={32} />
@@ -115,7 +115,7 @@ export default function AboutPage() {
               <span style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600, letterSpacing: '1px' }}>OUR CORE VALUES</span>
               <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem', color: 'white' }}>The Principles That Guide Everything We Do</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '2rem' }}>
               {values.map((val, idx) => (
                 <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}
                   style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '1rem' }}>
@@ -131,7 +131,7 @@ export default function AboutPage() {
         {/* What Makes Us Different */}
         <section className="section" style={{ background: 'var(--color-surface)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '4rem', alignItems: 'center' }}>
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <img src="/slide-1.png" alt="Technology Partner" style={{ width: '100%', borderRadius: '1rem', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }} />
               </motion.div>
