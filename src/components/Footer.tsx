@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -19,7 +19,7 @@ export default function Footer() {
               <a href="#" className="social-icon"><FaInstagram size={20} /></a>
               <a href="#" className="social-icon"><FaTiktok size={20} /></a>
               <a href="#" className="social-icon"><FaLinkedin size={20} /></a>
-              <a href="#" className="social-icon"><FaYoutube size={20} /></a>
+              <a href="https://wa.me/2349015001001" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp"><FaWhatsapp size={20} /></a>
             </div>
           </div>
 

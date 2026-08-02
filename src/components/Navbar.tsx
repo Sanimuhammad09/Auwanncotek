@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown, Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Laptop, Smartphone, Cpu, Mail, Phone, Clock } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@tanstack/react-router';
 
@@ -70,7 +70,7 @@ export default function Navbar() {
           <a href="#" style={{ color: 'white' }} aria-label="Instagram"><FaInstagram size={16} /></a>
           <a href="#" style={{ color: 'white' }} aria-label="Tiktok"><FaTiktok size={16} /></a>
           <a href="#" style={{ color: 'white' }} aria-label="LinkedIn"><FaLinkedin size={16} /></a>
-          <a href="#" style={{ color: 'white' }} aria-label="YouTube"><FaYoutube size={16} /></a>
+          <a href="https://wa.me/2349015001001" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }} aria-label="WhatsApp"><FaWhatsapp size={16} /></a>
         </div>
       </div>
 
