@@ -20,28 +20,35 @@ export default function ContactsPage() {
     setStatus({ submitting: true, message: '', type: '' });
 
     const form = e.currentTarget;
-    const data = new FormData(form);
-    data.append("access_key", "c6a75a63-5d5b-43af-8de9-1834267f9cec");
-    data.append("subject", "New Contact Form Submission");
-    data.append("from_name", `${formData.firstName} ${formData.lastName}`);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: data
+        body: JSON.stringify({
+          service_id: 'service_sxbru9q',
+          template_id: 'template_052rbqx',
+          user_id: 'rDE0EI1BBd-fUe1iW',
+          template_params: {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message
+          }
+        })
       });
       
-      const result = await response.json();
-      
-      if (result.success) {
+      if (response.ok) {
         setStatus({ submitting: false, message: 'Message sent successfully! We will get back to you soon.', type: 'success' });
         setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
         form.reset();
       } else {
-        setStatus({ submitting: false, message: result.message || 'Submission failed. Please try again later.', type: 'error' });
+        const result = await response.text();
+        setStatus({ submitting: false, message: result || 'Submission failed. Please try again later.', type: 'error' });
       }
     } catch (error) {
       console.error(error);
