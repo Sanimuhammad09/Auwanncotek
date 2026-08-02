@@ -191,7 +191,7 @@ export default function Navbar() {
 
           {/* Action Button */}
           <div style={{ display: 'none' }} className="desktop-nav">
-            <Link to="/contacts" className="btn btn-primary">WHATSAPP</Link>
+            <a href="https://wa.me/2349015001001" target="_blank" rel="noopener noreferrer" className="btn btn-primary">WHATSAPP</a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -245,7 +245,7 @@ export default function Navbar() {
                 </li>
               ))}
               <li>
-                <Link to="/contacts" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem', display: 'inline-block', textAlign: 'center' }} onClick={() => setMobileMenuOpen(false)}>WHATSAPP</Link>
+                <a href="https://wa.me/2349015001001" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%', marginTop: '1rem', display: 'inline-block', textAlign: 'center' }} onClick={() => setMobileMenuOpen(false)}>WHATSAPP</a>
               </li>
             </ul>
           </motion.div>
