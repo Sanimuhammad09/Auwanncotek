@@ -9,9 +9,44 @@ export default function ContactsPage() {
   const [formData, setFormData] = useState({
     firstName: '', lastName: '', email: '', phone: '', message: ''
   });
+  const [status, setStatus] = useState({ submitting: false, message: '', type: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus({ submitting: true, message: '', type: '' });
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    data.append("access_key", "c6a75a63-5d5b-43af-8de9-1834267f9cec");
+    data.append("subject", "New Contact Form Submission");
+    data.append("from_name", `${formData.firstName} ${formData.lastName}`);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: data
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setStatus({ submitting: false, message: 'Message sent successfully! We will get back to you soon.', type: 'success' });
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+        form.reset();
+      } else {
+        setStatus({ submitting: false, message: result.message || 'Submission failed. Please try again later.', type: 'error' });
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus({ submitting: false, message: 'Something went wrong. Please check your network and try again.', type: 'error' });
+    }
   };
 
   return (
@@ -30,37 +65,51 @@ export default function ContactsPage() {
               {/* Contact Form */}
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Send Us a Message</h2>
-                <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={e => e.preventDefault()}>
+                <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={handleSubmit}>
                   <div className="grid-responsive">
                     <div>
                       <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>First Name</label>
-                      <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
+                      <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required
                         style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid var(--color-border)', fontSize: '1rem', background: 'var(--color-bg)' }} />
                     </div>
                     <div>
                       <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>Last Name</label>
-                      <input type="text" name="lastName" value={formData.lastName} onChange={handleChange}
+                      <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required
                         style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid var(--color-border)', fontSize: '1rem', background: 'var(--color-bg)' }} />
                     </div>
                   </div>
                   <div>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>Email Address</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange}
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required
                       style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid var(--color-border)', fontSize: '1rem', background: 'var(--color-bg)' }} />
                   </div>
                   <div>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>Phone Number</label>
-                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
+                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required
                       style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid var(--color-border)', fontSize: '1rem', background: 'var(--color-bg)' }} />
                   </div>
                   <div>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--color-text)' }}>Message</label>
-                    <textarea name="message" rows={5} value={formData.message} onChange={handleChange}
+                    <textarea name="message" rows={5} value={formData.message} onChange={handleChange} required
                       style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid var(--color-border)', fontSize: '1rem', resize: 'vertical', background: 'var(--color-bg)' }} />
                   </div>
-                  <button className="btn btn-primary" type="submit" style={{ padding: '1rem 2rem', fontSize: '1.05rem' }}>
-                    <Send size={18} /> Send Message
+                  <button className="btn btn-primary" type="submit" disabled={status.submitting} style={{ padding: '1rem 2rem', fontSize: '1.05rem', opacity: status.submitting ? 0.7 : 1, cursor: status.submitting ? 'not-allowed' : 'pointer' }}>
+                    <Send size={18} /> {status.submitting ? 'Sending...' : 'Send Message'}
                   </button>
+
+                  {status.message && (
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ 
+                      padding: '1rem', 
+                      borderRadius: '0.5rem', 
+                      background: status.type === 'success' ? 'rgba(37, 211, 102, 0.1)' : 'rgba(246, 74, 0, 0.1)', 
+                      color: status.type === 'success' ? '#1da851' : 'var(--color-accent)',
+                      border: `1px solid ${status.type === 'success' ? 'rgba(37, 211, 102, 0.3)' : 'rgba(246, 74, 0, 0.3)'}`,
+                      textAlign: 'center',
+                      fontWeight: 500
+                    }}>
+                      {status.message}
+                    </motion.div>
+                  )}
                 </form>
               </motion.div>
 
