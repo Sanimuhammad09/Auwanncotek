@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { Link } from '@tanstack/react-router';
 
 export default function Footer() {
   return (
@@ -27,11 +28,10 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'white' }}>Quick Links</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li><a href="#home" className="footer-link">Home</a></li>
-              <li><a href="#about" className="footer-link">About Us</a></li>
-              <li><a href="#services" className="footer-link">Services</a></li>
-              <li><a href="#products" className="footer-link">Products</a></li>
-              <li><a href="#gallery" className="footer-link">Gallery</a></li>
+              <li><Link to="/" className="footer-link">Home</Link></li>
+              <li><Link to="/about" className="footer-link">About Us</Link></li>
+              <li><Link to="/gallery" className="footer-link">Gallery</Link></li>
+              <li><Link to="/contacts" className="footer-link">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -39,11 +39,11 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', color: 'white' }}>Top Services</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li><a href="#it-technical-support" className="footer-link">IT Support</a></li>
-              <li><a href="#pc-repair-&-services" className="footer-link">PC Repairs</a></li>
-              <li><a href="#point-of-sale-system" className="footer-link">POS Systems</a></li>
-              <li><a href="#website-design" className="footer-link">Web Design</a></li>
-              <li><a href="#business-centre" className="footer-link">Business Centre</a></li>
+              <li><Link to="/it-technical-support" className="footer-link">IT Support</Link></li>
+              <li><Link to="/pc-repair-services" className="footer-link">PC Repairs</Link></li>
+              <li><Link to="/point-of-sale-system" className="footer-link">POS Systems</Link></li>
+              <li><Link to="/website-design" className="footer-link">Web Design</Link></li>
+              <li><Link to="/business-centre" className="footer-link">Business Centre</Link></li>
             </ul>
           </div>
 
@@ -73,8 +73,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Auwancotek Solutions. All Rights Reserved.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a href="#" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }} className="footer-link">Privacy Policy</a>
-            <a href="#" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }} className="footer-link">Terms of Service</a>
+            <Link to="/" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }} className="footer-link">Privacy Policy</Link>
+            <Link to="/" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }} className="footer-link">Terms of Service</Link>
           </div>
         </div>
       </div>
