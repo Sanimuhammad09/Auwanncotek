@@ -18,7 +18,7 @@ export default function MeetCEO() {
               overflow: 'hidden',
               boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)'
             }}>
-              <img src="/ceo.png" alt="Muhammad Awal Usman - CEO" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/ceo.jpg" alt="Muhammad Awal Usman - CEO" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
           </motion.div>
 
