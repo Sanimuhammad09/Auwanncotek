@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 import { Link } from '@tanstack/react-router';
-import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, Database, Users, Laptop, Search } from 'lucide-react';
+import { Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, Database, Users, Laptop, Search, Server, Fingerprint, Video, FolderOpen } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
+    { title: 'Computer Networking', icon: <Server size={32} />, desc: 'We provide professional network design, installation, configuration, and support for businesses and organizations, building reliable and scalable infrastructure.', link: '/computer-networking' },
+    { title: 'Biometric Time & Attendance', icon: <Fingerprint size={32} />, desc: 'Professional installation and deployment of biometric time and attendance systems for accurate employee attendance, working-hour tracking, and reporting.', link: '/biometric-attendance' },
+    { title: 'CCTV Surveillance Systems', icon: <Video size={32} />, desc: 'Professional CCTV surveillance solutions for homes, offices, businesses, and organizations, including camera installation, networking, and remote monitoring.', link: '/cctv-surveillance' },
+    { title: 'Document Management & E-Archiving', icon: <FolderOpen size={32} />, desc: 'Transform, organize, and securely manage your business records with our document management and e-archiving solutions.', link: '/document-management' },
     { title: 'IT Technical Support', icon: <Wrench size={32} />, desc: 'Keep your systems running efficiently with proactive IT support, troubleshooting, maintenance, cybersecurity, and network management.', link: '/it-technical-support' },
     { title: 'PC Repairs & Maintenance', icon: <MonitorDot size={32} />, desc: 'Fast and reliable repair services for desktops and laptops, including hardware upgrades, virus removal, diagnostics, and data recovery.', link: '/pc-repair-services' },
     { title: 'Business Software Solutions', icon: <Layout size={32} />, desc: 'Powerful software systems designed to automate operations, improve productivity, and simplify business management.', link: '/business-software-solutions' },

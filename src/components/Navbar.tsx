@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown, Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Laptop, Smartphone, Cpu, Mail, Phone, Clock } from 'lucide-react';
+import { Menu, X, ChevronDown, Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Laptop, Smartphone, Cpu, Mail, Phone, Clock, Server, Fingerprint, Video, FolderOpen } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@tanstack/react-router';
@@ -14,6 +14,10 @@ export default function Navbar() {
       name: 'SERVICES', 
       href: '/services',
       dropdown: [
+        { name: 'Computer Networking', href: '/computer-networking', icon: <Server size={18} />, desc: 'Reliable network infrastructure' },
+        { name: 'Biometric Attendance', href: '/biometric-attendance', icon: <Fingerprint size={18} />, desc: 'Accurate time tracking systems' },
+        { name: 'CCTV Surveillance', href: '/cctv-surveillance', icon: <Video size={18} />, desc: 'Security & monitoring solutions' },
+        { name: 'Document Management', href: '/document-management', icon: <FolderOpen size={18} />, desc: 'Digitization & e-archiving' },
         { name: 'IT Technical Support', href: '/it-technical-support', icon: <Wrench size={18} />, desc: 'System troubleshooting & upgrades' },
         { name: 'PC Repair & Services', href: '/pc-repair-services', icon: <MonitorDot size={18} />, desc: 'Expert hardware repairs' },
         { name: 'Business Centre', href: '/business-centre', icon: <Briefcase size={18} />, desc: 'Professional office services' },
@@ -23,15 +27,6 @@ export default function Navbar() {
         { name: 'Computer Training', href: '/computer-training', icon: <GraduationCap size={18} />, desc: 'Tech-driven practical skills' },
         { name: 'Website Design', href: '/website-design', icon: <Layout size={18} />, desc: 'Stunning user-friendly sites' },
         { name: 'Graphic Design', href: '/graphic-design', icon: <PenTool size={18} />, desc: 'Eye-catching visuals & branding' }
-      ]
-    },
-    { 
-      name: 'PRODUCTS', 
-      href: '/products',
-      dropdown: [
-        { name: 'Laptop Sales', href: '/laptop-sales', icon: <Laptop size={18} />, desc: 'High-performance machines' },
-        { name: 'Phone Accessories', href: '/phone-accessories', icon: <Smartphone size={18} />, desc: 'Fast chargers & premium earbuds' },
-        { name: 'PC Accessories', href: '/pc-accessories', icon: <Cpu size={18} />, desc: 'Top-grade peripherals & drives' }
       ]
     },
     { name: 'GALLERY', href: '/gallery' },

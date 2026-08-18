@@ -14,6 +14,10 @@ import App from './App';
 import AboutPage from './pages/about';
 import GalleryPage from './pages/gallery';
 import ContactsPage from './pages/contacts';
+import DocumentManagementPage from './pages/document-management';
+import CCTVSurveillancePage from './pages/cctv-surveillance';
+import BiometricAttendancePage from './pages/biometric-attendance';
+import ComputerNetworkingPage from './pages/computer-networking';
 import ITTechnicalSupportPage from './pages/it-technical-support';
 import PCRepairServicesPage from './pages/pc-repair-services';
 import BusinessCentrePage from './pages/business-centre';
@@ -43,6 +47,10 @@ const routes = [
   createRoute({ getParentRoute: () => rootRoute, path: '/about', component: AboutPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/gallery', component: GalleryPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/contacts', component: ContactsPage }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/document-management', component: DocumentManagementPage }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/biometric-attendance', component: BiometricAttendancePage }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/cctv-surveillance', component: CCTVSurveillancePage }),
+  createRoute({ getParentRoute: () => rootRoute, path: '/computer-networking', component: ComputerNetworkingPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/it-technical-support', component: ITTechnicalSupportPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/pc-repair-services', component: PCRepairServicesPage }),
   createRoute({ getParentRoute: () => rootRoute, path: '/business-software-solutions', component: BusinessSoftwareSolutionsPage }),

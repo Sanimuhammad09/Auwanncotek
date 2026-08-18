@@ -2,7 +2,6 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import TrustBar from './components/TrustBar';
-import ProductCarousel from './components/ProductCarousel';
 import ServicesSection from './components/ServicesSection';
 import Process from './components/Process';
 import Industries from './components/Industries';
@@ -21,7 +20,6 @@ function App() {
       <main style={{ flexGrow: 1 }}>
         <HeroSection />
         <TrustBar />
-        <ProductCarousel />
         <ServicesSection />
         <Process />
         <Industries />

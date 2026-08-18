@@ -30,15 +30,21 @@ export default function MeetCEO() {
           >
             <span style={{ color: 'var(--color-accent)', fontWeight: 600, letterSpacing: '1px' }}>MEET OUR CEO</span>
             <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem', marginBottom: '1.5rem', color: 'white' }}>
-              Driven by Passion. <br/>
-              <span className="text-gradient">Guided by Purpose.</span>
+              Driven by Innovation. <br/>
+              <span className="text-gradient">Committed to Excellence.</span>
             </h2>
             
             <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
-              At the heart of Auwancotek is a visionary leader whose passion for technology and service excellence has shaped the Enterprise into a trusted name in IT and digital solutions.
+              At the core of Auwancotek is a forward-thinking leader whose passion for technology, innovation, and exceptional service has built the company into a trusted provider of IT solutions and digital transformation services.
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+              <strong>Muhammad Awal Usman</strong>, Founder and Chief Executive Officer of Auwancotek, is an accomplished technology professional, entrepreneur, and business strategist with over 15 years of industry experience. His expertise spans Information Technology, business solutions, digital transformation, and organizational development, enabling him to deliver practical, innovative solutions that help businesses thrive in an increasingly digital world.
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem', fontSize: '1.05rem' }}>
+              Inspired by a vision to bridge the technology gap and create meaningful impact, he established Auwancotek with a clear mission: to provide reliable, affordable, and innovative technology solutions that empower individuals, organizations, and government institutions to achieve sustainable growth.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '2rem', fontSize: '1.05rem' }}>
-              <strong>Muhammad Awal Usman</strong>, the Founder and CEO, is a dynamic entrepreneur and seasoned IT professional with a deep-rooted belief in the power of technology to transform lives and businesses. With a background in Humanity, IT, Business, and over 15 years of hands-on experience, Muhammad Awal founded the enterprise to bridge the digital gap in communities.
+              Under his leadership, Auwancotek has remained committed to professionalism, integrity, innovation, and customer satisfaction—delivering solutions that not only solve today's challenges but also prepare clients for the opportunities of tomorrow.
             </p>
 
             <blockquote style={{ 
@@ -49,11 +55,12 @@ export default function MeetCEO() {
               fontSize: '1.2rem',
               color: 'rgba(255,255,255,0.9)'
             }}>
-              "My goal has always been simple - make technology accessible, useful, and empowering for everyone, whether you're a student, a business owner, or a professional."
+              "Technology should not be a barrier—it should be an opportunity. My vision is to make innovative technology accessible, practical, and transformative for every individual and every organization we serve."
             </blockquote>
             
             <div style={{ marginTop: '2rem', fontWeight: 600 }}>
-              — Muhammad Awal Usman
+              — Muhammad Awal Usman <br />
+              <span style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', fontWeight: 'normal' }}>Founder & Chief Executive Officer</span>
             </div>
           </motion.div>
 
