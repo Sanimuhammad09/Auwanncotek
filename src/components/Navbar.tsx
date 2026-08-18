@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown, Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Laptop, Smartphone, Cpu, Mail, Phone, Clock, Server, Fingerprint, Video, FolderOpen } from 'lucide-react';
+import { Menu, X, ChevronDown, Wrench, MonitorDot, Briefcase, FileText, ShoppingCart, UserCheck, GraduationCap, Layout, PenTool, Mail, Phone, Clock, Server, Fingerprint, Video, FolderOpen } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@tanstack/react-router';

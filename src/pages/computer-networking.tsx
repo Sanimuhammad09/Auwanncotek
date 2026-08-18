@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { motion } from 'framer-motion';
-import { ShieldCheck, MonitorDot, Server, Lock, Cloud, Wrench, CheckCircle, Wifi, Activity } from 'lucide-react';
+import { ShieldCheck, Server, Lock, Wrench, CheckCircle, Wifi, Activity } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 export default function ComputerNetworkingPage() {
